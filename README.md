@@ -47,3 +47,30 @@ const { MongoManager } = require('mongodb-manager');
 })();
 
 ```
+
+## Aggregation Example
+
+```javascript
+const { MongoManager } = require('mongodb-manager');
+
+// Initialize MongoDB Manager with MongoDB URL and database name
+const mongoManager = new MongoManager("mongodb://127.0.0.1:27107", "test");
+
+(async function () {
+    try {
+        // Build query parameters for aggregation
+        let params = mongoManager.queryParamsBuilder("app_user_data", "aggregate", [{$match:{ id: "1234" }}]); // insertmany or aggregation must be an array....
+
+        // Execute the aggregation query
+        let data = await mongoManager.queryRunner(params);
+
+        // Output the result
+        console.log('Aggregation Result:', data);
+    } catch (error) {
+        console.error(error.message);
+    } finally {
+        // Close the MongoDB connection
+        await mongoManager.db.close();
+    }
+})();
+```
