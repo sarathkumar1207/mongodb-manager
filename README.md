@@ -16,7 +16,7 @@ Install MongoDB Manager via npm:
 
 ```bash
 npm install mongodb-manager
-
+```
 
 
 ## Usage
@@ -25,7 +25,7 @@ npm install mongodb-manager
 const { MongoManager } = require('mongodb-manager');
 
 // Initialize MongoDB Manager with MongoDB URL and database name
-const mongoManager = new MongoManager("mongodb://127.0.0.1:27107", "test");
+const mongoManager = new MongoManager(process.env.DB_URL, process.env.DB_NAME);
 
 (async function () {
     try {
@@ -44,3 +44,5 @@ const mongoManager = new MongoManager("mongodb://127.0.0.1:27107", "test");
         await mongoManager.db.close();
     }
 })();
+
+```
