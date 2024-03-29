@@ -16,3 +16,31 @@ Install MongoDB Manager via npm:
 
 ```bash
 npm install mongodb-manager
+
+
+
+## Usage
+
+```javascript
+const { MongoManager } = require('mongodb-manager');
+
+// Initialize MongoDB Manager with MongoDB URL and database name
+const mongoManager = new MongoManager("mongodb://127.0.0.1:27107", "test");
+
+(async function () {
+    try {
+        // Build query parameters
+        let params = mongoManager.queryParamsBuilder("app_user_data", "find", { id: "1234" });
+
+        // Execute the query
+        let data = await mongoManager.queryRunner(params);
+
+        // Output the result
+        console.log('Data:', data);
+    } catch (error) {
+        console.error(error.message);
+    } finally {
+        // Close the MongoDB connection
+        await mongoManager.db.close();
+    }
+})();
