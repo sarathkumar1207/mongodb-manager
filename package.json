@@ -1,6 +1,6 @@
 {
-  "name": "mongodb-manager",
-  "version": "1.0.0",
+  "name": "mongodb-queryrunner",
+  "version": "1.0.2",
   "description": "MongoDB Manager is a lightweight JavaScript library designed to simplify interactions with MongoDB databases. It provides a high-level abstraction for common database operations, making it easier for developers to work with MongoDB in their Node.js applications.",
   "main": "mongo_manager.js",
   "scripts": {

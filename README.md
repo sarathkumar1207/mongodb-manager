@@ -15,14 +15,14 @@ MongoDB Manager is a lightweight JavaScript library designed to simplify interac
 Install MongoDB Manager via npm:
 
 ```bash
-npm install mongodb-manager
+npm install mongodb-queryrunner
 ```
 
 
 ## Usage
 
 ```javascript
-const MongoManager = require('mongodb-manager');
+const MongoManager = require('mongodb-queryrunner');
 
 
 
@@ -53,7 +53,7 @@ const MongoManager = require('mongodb-manager');
 ## Aggregation Example
 
 ```javascript
-const  MongoManager  = require('mongodb-manager');
+const  MongoManager  = require('mongodb-queryrunner');
 
 
 (async function () {
