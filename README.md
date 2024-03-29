@@ -53,11 +53,12 @@ const { MongoManager } = require('mongodb-manager');
 ```javascript
 const { MongoManager } = require('mongodb-manager');
 
-// Initialize MongoDB Manager with MongoDB URL and database name
-const mongoManager = new MongoManager("mongodb://127.0.0.1:27107", "test");
+
 
 (async function () {
     try {
+        // Initialize MongoDB Manager with MongoDB URL and database name
+        const mongoManager = new MongoManager(process.env.DB_URL, process.env.DB_NAME);
         // Build query parameters for aggregation
         let params = mongoManager.queryParamsBuilder("app_user_data", "aggregate", [{$match:{ id: "1234" }}]); // insertmany or aggregation must be an array....
 
