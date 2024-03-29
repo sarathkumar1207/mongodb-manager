@@ -22,14 +22,15 @@ npm install mongodb-manager
 ## Usage
 
 ```javascript
-const { MongoManager } = require('mongodb-manager');
+const MongoManager = require('mongodb-manager');
 
 
 
 (async function () {
+    const mongoManager = new MongoManager(process.env.DB_URL, process.env.DB_NAME);
     try {
         // Initialize MongoDB Manager with MongoDB URL and database name
-        const mongoManager = new MongoManager(process.env.DB_URL, process.env.DB_NAME);
+
         // Build query parameters
         let params = mongoManager.queryParamsBuilder("app_user_data", "find", { id: "1234" });
 
@@ -42,17 +43,17 @@ const { MongoManager } = require('mongodb-manager');
         console.error(error.message);
     } finally {
         // Close the MongoDB connection
-        await mongoManager.db.close();
+        await mongoManager.db_close();
     }
 })();
+
 
 ```
 
 ## Aggregation Example
 
 ```javascript
-const { MongoManager } = require('mongodb-manager');
-
+const  MongoManager  = require('mongodb-manager');
 
 
 (async function () {
@@ -71,7 +72,7 @@ const { MongoManager } = require('mongodb-manager');
         console.error(error.message);
     } finally {
         // Close the MongoDB connection
-        await mongoManager.db.close();
+        await mongoManager.db_close();
     }
 })();
 ```
