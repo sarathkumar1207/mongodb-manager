@@ -16,3 +16,7 @@ Install MongoDB Manager via npm:
 
 ```bash
 npm install mongodb-manager
+
+
+  ```javascript
+console.log("hello"):
