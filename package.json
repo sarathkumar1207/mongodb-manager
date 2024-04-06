@@ -1,7 +1,7 @@
 {
   "name": "mongodb-queryrunner",
-  "version": "1.0.2",
-  "description": "MongoDB Manager is a lightweight JavaScript library designed to simplify interactions with MongoDB databases. It provides a high-level abstraction for common database operations, making it easier for developers to work with MongoDB in their Node.js applications.",
+  "version": "1.0.3",
+  "description": "MongoManager is a versatile Node.js library for MongoDB database operations, offering simplified querying and efficient data manipulation. With intuitive methods and seamless integration, MongoManager streamlines database interactions, allowing developers to focus on building robust applications.",
   "main": "mongo_manager.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,10 +11,18 @@
     "url": "git+https://github.com/sarathkumar1207/mongodb-manager.git"
   },
   "keywords": [
-    "mongomanager",
-    "mongodbmanager",
-    "mongodblibrary",
-    "mongo"
+    "MongoDB library",
+    "Node.js MongoDB",
+    "Database operations",
+    "Query builder",
+    "Data manipulation",
+    "Database management",
+    "Node.js database",
+    "MongoDB queries",
+    "Database utilities",
+    "Data aggregation",
+    "MongoDB integration",
+    "JavaScript MongoDB"
   ],
   "author": "Sarathkumar",
   "license": "ISC",
